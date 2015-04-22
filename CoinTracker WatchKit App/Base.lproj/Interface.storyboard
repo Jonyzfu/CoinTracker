@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Coins-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Coins" id="AgC-eL-Hgc" customClass="CoinsInterfaceController" customModule="CoinTracker_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="2vm-ZB-wzM">
+                            <items>
+                                <tableRow identifier="CoinRow" id="Yho-AC-ow4" customClass="CoinRow" customModule="CoinTracker_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="LwA-Gk-TZs">
+                                        <items>
+                                            <label alignment="left" text="Coin name" id="h4n-lK-8iH">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                            <label alignment="left" text="Price" id="nXO-gk-g86"/>
+                                        </items>
+                                        <connections>
+                                            <segue destination="blk-V5-OJY" kind="push" identifier="CoinDetails" id="lVw-KK-hza"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="detailLabel" destination="nXO-gk-g86" id="Bjx-6f-8k9"/>
+                                        <outlet property="titleLabel" destination="h4n-lK-8iH" id="pOe-H3-33M"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="coinTable" destination="2vm-ZB-wzM" id="kjQ-Ro-P0N"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+        <!--Coin Detail Interface Controller-->
+        <scene sceneID="2yM-ZS-bXN">
+            <objects>
+                <controller id="blk-V5-OJY" customClass="CoinDetailInterfaceController" customModule="CoinTracker_WatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="463" y="339"/>
+        </scene>
+    </scenes>
+</document>
