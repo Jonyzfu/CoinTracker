@@ -83,5 +83,21 @@ class CoinsInterfaceController: WKInterfaceController {
             }
         }
     }
+    
+    override func handleUserActivity(userInfo: [NSObject : AnyObject]!) {
+        // Check to see if the coin key and value pair exist in the userInfo dictionary
+        if let handedCoin = userInfo["coin"] as? String {
+            // You retrieve all the cached coins using the CoinHelper class
+            let coins = coinHelper.cachedPrices()
+            // Enumertate over the cached coin data
+            for coin in coins {
+                if coin.name == handedCoin {
+                    // Push the detail interface controller onto the navigation stack
+                    pushControllerWithName("CoinDetailInterfaceController", context: coin)
+                    break
+                }
+            }
+        }
+    }
 
 }

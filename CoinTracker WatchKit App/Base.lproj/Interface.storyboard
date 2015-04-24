@@ -38,6 +38,41 @@
                 </controller>
             </objects>
         </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="9hV-g6-ZSl">
+            <objects>
+                <glanceController id="bzv-mw-u0o" customClass="CoinGlanceInterfaceController" customModule="CoinTracker_WatchKit_Extension">
+                    <items>
+                        <group alignment="left" id="jfs-dg-UTt">
+                            <items>
+                                <imageView width="40" height="40" alignment="left" verticalAlignment="center" id="rmK-H8-ULl"/>
+                                <label alignment="left" verticalAlignment="center" text="Coin" minimumScaleFactor="0.69999999999999996" id="Ce0-hU-Q9i">
+                                    <fontDescription key="font" type="boldSystem" pointSize="34"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="left" id="dhv-7m-fUL">
+                            <items>
+                                <group alignment="center" verticalAlignment="center" layout="vertical" id="KJ5-Pl-dCC">
+                                    <items>
+                                        <label alignment="center" text="0.00" minimumScaleFactor="0.5" id="o9L-51-mLb">
+                                            <fontDescription key="font" type="boldSystem" pointSize="38"/>
+                                        </label>
+                                        <label alignment="right" verticalAlignment="bottom" text="USD" id="AdK-WF-WEG"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="coinImage" destination="rmK-H8-ULl" id="QWl-KN-wqG"/>
+                        <outlet property="nameLabel" destination="Ce0-hU-Q9i" id="X8K-NM-V1t"/>
+                        <outlet property="priceLabel" destination="o9L-51-mLb" id="Orc-jL-zuQ"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="517" y="81"/>
+        </scene>
         <!--CoinDetailInterfaceController-->
         <scene sceneID="2yM-ZS-bXN">
             <objects>
@@ -85,7 +120,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="533" y="242"/>
+            <point key="canvasLocation" x="630" y="350"/>
         </scene>
     </scenes>
 </document>
